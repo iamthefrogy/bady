@@ -1,6 +1,6 @@
-# badminton-site
+# bady
 
-Source repo for badminton.chintangurjar.com — GitHub Pages, plain HTML/CSS/JS, no build tool.
+Source repo for bady.chintangurjar.com — GitHub Pages, plain HTML/CSS/JS, no build tool.
 
 ## Structure
 
@@ -64,10 +64,10 @@ GitHub's own.
 
 ## Domain setup (one-time)
 
-1. Public GitHub repo: `github.com/iamthefrogy/badminton-site`.
-2. `CNAME` file at repo root contains `badminton.chintangurjar.com`.
+1. Public GitHub repo: `github.com/iamthefrogy/bady`.
+2. `CNAME` file at repo root contains `bady.chintangurjar.com`.
 3. Repo Settings → Pages: Source = Deploy from branch, Branch = `main`, Folder = `/ (root)`.
-4. DNS at the registrar: CNAME record, host `badminton`, value `iamthefrogy.github.io`.
+4. DNS at the registrar: CNAME record, host `bady`, value `iamthefrogy.github.io`.
 5. Enable "Enforce HTTPS" in Pages settings once the cert is issued.
 
 ## Notes
