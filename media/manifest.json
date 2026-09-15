@@ -1,4 +1,13 @@
 {
-  "generatedAt": "2026-09-15T09:35:50.512Z",
-  "items": []
+  "generatedAt": "2026-09-15T09:57:04.941Z",
+  "items": [
+    {
+      "file": "1.png",
+      "path": "media/photos/1.png",
+      "title": "1",
+      "date": "2026-09-15",
+      "tags": [],
+      "sizeBytes": 221101
+    }
+  ]
 }
