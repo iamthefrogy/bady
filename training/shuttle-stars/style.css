@@ -301,6 +301,5 @@ a:hover { color: var(--accent-dark); }
 }
 
 @media (max-width: 480px) {
-  .ss-main { padding-left: 4%; padding-right: 4%; }
   .warmup-row { grid-template-columns: 70px 1fr; }
 }
