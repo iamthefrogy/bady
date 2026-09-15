@@ -4,22 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Definitive Badminton Restringing Guide</title>
+  <title>Restringing Guide - Bady</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #EEF1EE;
-      --surface: #FFFFFF;
-      --console: #0F211C;
-      --ink: #14201C;
-      --soft: #56635C;
-      --power: #E2552B;
-      --amber: #F0A500;
-      --teal: #1FA18C;
-      --control: #0E6E50;
-      --line: rgba(20, 32, 28, .12);
-      --line2: rgba(20, 32, 28, .06);
+      --bg: #f3ecdf;
+      --surface: #fdfaf4;
+      --console: #241a10;
+      --ink: #33291f;
+      --soft: #6b5c4c;
+      --power: #e8590c;
+      --amber: #f0a202;
+      --teal: #0b7285;
+      --control: #2b8a3e;
+      --line: rgba(51, 41, 31, .12);
+      --line2: rgba(51, 41, 31, .06);
       --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --sans: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --display: "Baloo 2", var(--sans);
     }
 
     * {
@@ -76,6 +80,7 @@
     }
 
     h1 {
+      font-family: var(--display);
       font-size: clamp(32px, 8.5vw, 52px);
       line-height: 1;
       letter-spacing: -.025em;
@@ -84,6 +89,7 @@
     }
 
     h2 {
+      font-family: var(--display);
       font-size: clamp(22px, 5.6vw, 30px);
       line-height: 1.06;
       letter-spacing: -.018em;
@@ -116,7 +122,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(238, 241, 238, .92);
+      background: rgba(243, 236, 223, .92);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--line)
     }
@@ -202,7 +208,7 @@
     /* CONSOLE / recommender */
     .console {
       background: var(--console);
-      color: #E8F0EC;
+      color: #f6efe0;
       border-radius: 20px;
       padding: 26px 20px 24px;
       margin-top: 4px
@@ -217,7 +223,7 @@
     }
 
     .console .sub {
-      color: #9FB1AA;
+      color: #b8a888;
       margin-top: 6px;
       font-size: 15px
     }
@@ -231,7 +237,7 @@
       font-size: 11px;
       letter-spacing: .16em;
       text-transform: uppercase;
-      color: #8DA29B;
+      color: #a89678;
       margin-bottom: 10px
     }
 
@@ -246,7 +252,7 @@
       font-weight: 600;
       background: rgba(255, 255, 255, .06);
       border: 1px solid rgba(255, 255, 255, .16);
-      color: #D6E2DC;
+      color: #ede1cc;
       border-radius: 10px;
       padding: 10px 13px;
       cursor: pointer;
@@ -289,7 +295,7 @@
       font-size: 11px;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: #8DA29B
+      color: #a89678
     }
 
     .res-row {
@@ -301,7 +307,7 @@
       font-size: 11px;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: #8DA29B;
+      color: #a89678;
       margin-bottom: 8px
     }
 
@@ -309,9 +315,9 @@
       display: inline-block;
       font-size: 13px;
       font-weight: 600;
-      background: rgba(31, 161, 140, .18);
-      border: 1px solid rgba(31, 161, 140, .5);
-      color: #9EE7D8;
+      background: rgba(11, 114, 133, .18);
+      border: 1px solid rgba(11, 114, 133, .5);
+      color: #f0a202;
       border-radius: 8px;
       padding: 6px 11px;
       margin: 0 6px 6px 0
@@ -319,13 +325,13 @@
 
     .res-gauge {
       font-size: 14.5px;
-      color: #C7D5CF
+      color: #ddd0b8
     }
 
     .res-why {
       margin-top: 16px;
       font-size: 14.5px;
-      color: #C7D5CF;
+      color: #ddd0b8;
       background: rgba(255, 255, 255, .05);
       border-radius: 11px;
       padding: 13px 14px;
@@ -339,7 +345,7 @@
     /* myth */
     .myth {
       background: var(--ink);
-      color: #EAF0EC;
+      color: #f2e9d6;
       border-radius: 18px;
       padding: 24px 20px
     }
@@ -353,7 +359,7 @@
     }
 
     .myth p {
-      color: #B7C5BE
+      color: #cbbc9e
     }
 
     .tramp {
@@ -495,7 +501,7 @@
       background: var(--ink);
       border: 3px solid #fff;
       cursor: pointer;
-      box-shadow: 0 2px 7px rgba(20, 32, 28, .35)
+      box-shadow: 0 2px 7px rgba(51, 41, 31, .35)
     }
 
     .slider::-moz-range-thumb {
@@ -505,7 +511,7 @@
       background: var(--ink);
       border: 3px solid #fff;
       cursor: pointer;
-      box-shadow: 0 2px 7px rgba(20, 32, 28, .35)
+      box-shadow: 0 2px 7px rgba(51, 41, 31, .35)
     }
 
     .ticks {
@@ -899,7 +905,7 @@
       border-radius: 50%;
       background: var(--power);
       border: 3px solid #fff;
-      box-shadow: 0 2px 6px rgba(20, 32, 28, .3);
+      box-shadow: 0 2px 6px rgba(51, 41, 31, .3);
       transform: translate(-50%, -50%);
       transition: left .3s ease
     }
@@ -1036,8 +1042,8 @@
 
     .shottip {
       margin-top: 6px;
-      background: rgba(243, 165, 0, .13);
-      border: 1px solid rgba(243, 165, 0, .45);
+      background: rgba(240, 162, 2, .13);
+      border: 1px solid rgba(240, 162, 2, .45);
       border-radius: 11px;
       padding: 12px 13px;
       font-size: 13.5px;
@@ -1123,17 +1129,17 @@
     }
 
     .check .rule {
-      background: rgba(31, 161, 140, .1);
-      border: 1px solid rgba(31, 161, 140, .4);
+      background: rgba(11, 114, 133, .1);
+      border: 1px solid rgba(11, 114, 133, .4);
       border-radius: 11px;
       padding: 12px 14px;
       font-size: 14.5px;
-      color: #0c5e44;
+      color: #1e6e34;
       margin-bottom: 14px
     }
 
     .check .rule b {
-      color: #0a4a36
+      color: #164f26
     }
 
     .check ul {
@@ -1225,7 +1231,7 @@
     /* cheat */
     .cheat {
       background: var(--console);
-      color: #E8F0EC;
+      color: #f6efe0;
       border-radius: 18px;
       padding: 26px 20px
     }
@@ -1249,7 +1255,7 @@
       display: flex;
       gap: 12px;
       font-size: 15px;
-      color: #C7D5CF
+      color: #ddd0b8
     }
 
     .cheat li:first-child {

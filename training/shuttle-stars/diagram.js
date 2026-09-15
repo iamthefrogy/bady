@@ -1,4 +1,4 @@
-/* Shuttle Stars diagram engine — animated top-down court diagrams.
+/* Shuttle Stars diagram engine - animated top-down court diagrams.
    <ex-diagram spec='{"a":"pairsNet","arc":"high"}'></ex-diagram> */
 (function () {
   const INK = '#33291f', LINE = '#d3c7b2', FLOOR = '#fbf7ef', NET = '#8a7c66';
@@ -59,7 +59,7 @@
       const d = 'M60 50 H260 Q276 50 276 66 V134 Q276 150 260 150 H60 Q44 150 44 134 V66 Q44 50 60 50';
       let g = `<path d="${d}" fill="none" stroke="${LINE}" stroke-width="1.5" stroke-dasharray="4 5"/>`;
       g += mov(d, 7, P(C.t)) + mov(d, 7, P(C.t), 2.3) + mov(d, 4.2, P(C.o, 'GO'), 1);
-      return svg(hall() + g + at(160, 100, `<text text-anchor="middle" font-size="10" fill="${INK}" opacity="0.55" font-family="Nunito,sans-serif" font-weight="700">jog — SPRINT on the call</text>`));
+      return svg(hall() + g + at(160, 100, `<text text-anchor="middle" font-size="10" fill="${INK}" opacity="0.55" font-family="Nunito,sans-serif" font-weight="700">jog - SPRINT on the call</text>`));
     },
     widths(s) {
       const d = 'M50 0 H220 H0';
@@ -100,7 +100,7 @@
       let g = cs.map((c2) => cone(c2[0], c2[1])).join('') + spot(160, 100, C.t);
       const d = 'M160 100 L70 50 L160 100 L250 50 L160 100 L250 150 L160 100 L70 150 L160 100';
       g += `<path d="${d}" fill="none" stroke="${C.t}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.5"/>` + mov(d, 6.5, P(C.o, 'GO'));
-      return svg(hall() + g + `<text x="160" y="188" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">out to a corner — back to base every time</text>`);
+      return svg(hall() + g + `<text x="160" y="188" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">out to a corner - back to base every time</text>`);
     },
     tag(s) {
       let g = '';
@@ -128,7 +128,7 @@
       const tx = deep ? 262 : 196, h = s.high ? 78 : 14;
       let g = `<rect x="${deep ? 244 : 188}" y="42" width="${deep ? 34 : 24}" height="58" fill="${C.g}" opacity="0.18" stroke="${C.g}" stroke-dasharray="3 3"/>`;
       g += shot(112, 70, tx, 70, h, 2.4) + at(98, 70, P(C.o, 'A', 9));
-      g += `<text x="160" y="190" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">${s.high ? 'high serve — full swing, land it deep' : 'low serve — skim the tape into the box'}</text>`;
+      g += `<text x="160" y="190" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">${s.high ? 'high serve - full swing, land it deep' : 'low serve - skim the tape into the box'}</text>`;
       return svg(court() + g);
     },
     keeper(s) {
@@ -154,7 +154,7 @@
         g += at(46, y, P(C.t, '', 6)) + at(62, y, P(C.t, '', 6)) + at(78, y, P(C.t, '', 6));
         g += at(0, y, mov('M94 0 H262 H94', 3.6, P(C.o, '', 7), r * 0.5)) + cone(266, y);
       });
-      return svg(hall() + g + `<text x="160" y="182" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">go — round the cone — tag the next runner</text>`);
+      return svg(hall() + g + `<text x="160" y="182" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">go - round the cone - tag the next runner</text>`);
     },
     target(s) {
       let g = hoopEl(230, 60, C.t) + hoopEl(250, 110, C.g) + hoopEl(215, 150, C.p);
@@ -186,12 +186,12 @@
       g += `<path d="M160 100 V48" stroke="${C.o}" stroke-width="1.5" stroke-dasharray="2 4" opacity="0.5"/>`;
       g += at(120, 118, P(C.t, '', 7)) + at(120, 106, mov('M0 0 V-38 V0', 1.7, shuttleG(), 0.4));
       g += at(204, 118, P(C.t, '', 7)) + at(204, 106, mov('M0 0 V-44 V0', 1.55, shuttleG(), 0.8));
-      return svg(hall() + g + `<text x="160" y="160" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">keep it up — count your streak</text>`);
+      return svg(hall() + g + `<text x="160" y="160" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">keep it up - count your streak</text>`);
     },
     mirror(s) {
       const d = 'M0 0 H50 V30 H-50 V-30 H0 Z';
       return svg(court() + at(90, 100, mov(d, 5, P(C.o, 'L', 9))) + at(230, 100, mov(d, 5, P(C.t, 'F', 9))) +
-        `<text x="160" y="190" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">leader moves — partner mirrors</text>`);
+        `<text x="160" y="190" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">leader moves - partner mirrors</text>`);
     },
     course(s) {
       let g = cone(70, 60) + hoopEl(130, 120) + cone(190, 60) + hoopEl(250, 120, C.p) + cone(250, 60);
@@ -204,7 +204,7 @@
       [[70, 60], [105, 90], [70, 130], [110, 150]].forEach((p2) => { g += at(p2[0], p2[1], P(C.o, '', 7)); });
       [[250, 60], [215, 90], [250, 130], [215, 150]].forEach((p2) => { g += at(p2[0], p2[1], P(C.t, '', 7)); });
       g += shot(110, 90, 240, 118, 46, 2.4) + shot(215, 150, 84, 70, 46, 2.6, 1.2);
-      return svg(court() + g + `<text x="160" y="190" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">hit to space — defenders catch</text>`);
+      return svg(court() + g + `<text x="160" y="190" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">hit to space - defenders catch</text>`);
     },
     golf(s) {
       let g = spot(60, 150, C.o) + `<text x="60" y="172" text-anchor="middle" font-size="9" font-weight="800" fill="${C.o}" font-family="Nunito,sans-serif">TEE</text>`;
@@ -224,7 +224,7 @@
       let g = at(80, 100, P(C.t, 'T', 9));
       g += shot(94, 100, 235, 92, 8, 1.5) + shot(94, 100, 235, 112, 8, 1.5, 0.75);
       g += `<g>${P(C.o, 'D', 9)}<animateTransform attributeName="transform" type="translate" values="240 70;240 134;240 70" dur="1.5s" repeatCount="indefinite"/></g>`;
-      return svg(hall() + g + `<text x="160" y="176" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">chasse sideways to dodge — never turn your back</text>`);
+      return svg(hall() + g + `<text x="160" y="176" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">chasse sideways to dodge - never turn your back</text>`);
     },
     scoop(s) {
       let g = at(220, 140, shuttleG()) + `<circle cx="220" cy="140" r="8" fill="none" stroke="${LINE}" stroke-width="1.5" stroke-dasharray="2 3"/>`;
@@ -236,19 +236,19 @@
       let g = '';
       [[80, 60], [140, 90], [200, 55], [250, 100], [110, 140], [230, 150], [170, 125]].forEach((p2, i) => { g += i % 2 ? cone(p2[0], p2[1]) : `<path d="M${p2[0] - 5} ${p2[1] - 4} L${p2[0]} ${p2[1] + 6} L${p2[0] + 5} ${p2[1] - 4} Z" fill="#d9cdb8" stroke="#b5a78e"/>`; });
       g += mov('M70 80 L140 90 L110 140 L70 80', 3.4, P(C.o, 'UP', 9)) + mov('M260 70 L250 100 L230 150 L260 70', 3.4, P(C.t, 'DN', 9));
-      return svg(hall() + g + `<text x="160" y="182" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">one team flips up, one flips down — lunge, don't bend!</text>`);
+      return svg(hall() + g + `<text x="160" y="182" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">one team flips up, one flips down - lunge, don't bend!</text>`);
     },
     around(s) {
       const pts = [[160, 46], [242, 100], [160, 154], [78, 100]];
       let g = pts.map((p2, i) => at(p2[0], p2[1], P(C.t, String(i + 1), 8))).join('') + at(160, 100, P(C.o, 'H', 9));
       g += shot(160, 52, 160, 94, 16, 2, 0) + shot(236, 100, 168, 100, 16, 2, 1) + shot(160, 148, 160, 106, 16, 2, 2) + shot(84, 100, 152, 100, 16, 2, 3);
-      return svg(hall() + g + `<text x="160" y="188" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">block each feed in turn — keep turning to face</text>`);
+      return svg(hall() + g + `<text x="160" y="188" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">block each feed in turn - keep turning to face</text>`);
     },
     carry(s) {
       const d = 'M60 140 L120 70 L200 130 L262 70';
       let g = `<path d="${d}" fill="none" stroke="${C.t}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.5"/>` + cone(120, 70) + cone(200, 130);
       g += mov(d, 5, `<g>${P(C.o, '', 9)}${at(0, -14, shuttleG())}</g>`);
-      return svg(hall() + g + `<text x="160" y="182" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">balance the shuttle on the strings — don't drop it</text>`);
+      return svg(hall() + g + `<text x="160" y="182" text-anchor="middle" font-size="10" fill="${INK}" opacity="0.6" font-family="Nunito,sans-serif" font-weight="700">balance the shuttle on the strings - don't drop it</text>`);
     },
     hilow(s) {
       let g = at(70, 55, P(C.t, 'HI', 9)) + at(250, 55, P(C.t, 'HI', 9)) + at(70, 145, P(C.t, 'LO', 9)) + at(250, 145, P(C.t, 'LO', 9));

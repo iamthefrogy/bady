@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Videos — Badminton</title>
+  <title>Videos - Bady</title>
   <link rel="stylesheet" href="../assets/css/site.css">
   <style>
     .video-card { padding: 0; overflow: hidden; }
@@ -25,7 +25,7 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="brand"><a href="../index.html">Badminton</a></div>
+    <div class="brand"><a href="../index.html">Bady</a></div>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../tools/index.html">Tools</a>
@@ -36,7 +36,7 @@
 
   <p class="breadcrumb"><a href="../index.html">Home</a> / Videos</p>
   <h1>Videos</h1>
-  <p class="tagline">Training clips and match footage. Add entries to <code>data/videos.json</code> to grow this list.</p>
+  <p class="tagline">Training clips and match footage.</p>
 
   <div class="tag-filter" id="tagFilter"></div>
   <div class="card-grid" id="grid">
@@ -70,7 +70,7 @@
         .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 
       if (items.length === 0) {
-        grid.innerHTML = '<p class="empty-state">No videos yet — add an entry to data/videos.json.</p>';
+        grid.innerHTML = '<p class="empty-state">No videos yet - check back soon.</p>';
         return;
       }
 

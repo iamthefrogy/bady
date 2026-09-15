@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Gallery — Badminton</title>
+  <title>Gallery - Bady</title>
   <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="brand"><a href="../index.html">Badminton</a></div>
+    <div class="brand"><a href="../index.html">Bady</a></div>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../tools/index.html">Tools</a>
@@ -19,7 +19,7 @@
 
   <p class="breadcrumb"><a href="../index.html">Home</a> / Gallery</p>
   <h1>Gallery</h1>
-  <p class="tagline">Match and practice photos. Auto-updates when a new photo is pushed to <code>media/photos/</code>.</p>
+  <p class="tagline">Match and practice photos.</p>
 
   <div class="tag-filter" id="tagFilter"></div>
   <div class="media-grid" id="grid">
@@ -41,7 +41,7 @@
       const items = (manifest.items || []).slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 
       if (items.length === 0) {
-        grid.innerHTML = '<p class="empty-state">No photos yet — drop images into media/photos/ and push.</p>';
+        grid.innerHTML = '<p class="empty-state">No photos yet - check back soon.</p>';
         return;
       }
 
@@ -64,6 +64,16 @@
         tagField: "tags",
         filterBarSelector: "#tagFilter",
         cardSelector: ".media-item",
+      });
+
+      grid.addEventListener("click", (e) => {
+        const img = e.target.closest(".media-item img");
+        if (!img) return;
+        const box = document.createElement("div");
+        box.className = "lightbox";
+        box.innerHTML = `<button type="button" class="lightbox-close">&times;</button><img src="${img.src}" alt="${img.alt}">`;
+        box.addEventListener("click", () => box.remove());
+        document.body.appendChild(box);
       });
     })();
   </script>

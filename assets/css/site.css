@@ -195,6 +195,7 @@ h2 {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: var(--line);
+  cursor: zoom-in;
 }
 
 .media-item .meta {
@@ -204,5 +205,39 @@ h2 {
 
 .media-item .meta .title { font-weight: 700; }
 .media-item .meta .date { color: var(--muted); font-size: 12px; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(51, 41, 31, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5%;
+  z-index: 30;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+  cursor: default;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 5%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--ink);
+}
 
 [hidden] { display: none !important; }

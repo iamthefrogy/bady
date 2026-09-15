@@ -3,7 +3,7 @@
 /**
  * Renders "All" + one chip per unique tag found in `items`, and wires click
  * handlers to show/hide elements matching `cardSelector` by their data-tags
- * attribute. No predefined tag list — tags are whatever strings appear in
+ * attribute. No predefined tag list - tags are whatever strings appear in
  * the data, so new content categories need zero code changes here.
  */
 function initTagFilter({ items, tagField = "tags", filterBarSelector, cardSelector }) {

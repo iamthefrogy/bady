@@ -109,13 +109,13 @@
     return `
       <div class="week-picker">${picker}</div>
       <div class="week-detail">
-        <h2>Week ${week.n} — ${esc(week.title)}</h2>
+        <h2>Week ${week.n} - ${esc(week.title)}</h2>
         <div class="sub">${esc(week.sub || "")} · Kit: ${esc(week.kit || "")}</div>
 
-        <div class="section-title">Warm-up — 15 min</div>
+        <div class="section-title">Warm-up - 15 min</div>
         <div class="warmup-table">${warmupRows}</div>
 
-        <div class="section-title">Games — 15 min</div>
+        <div class="section-title">Games - 15 min</div>
         <div class="card-grid">${gameCards}</div>
 
         ${backup}
