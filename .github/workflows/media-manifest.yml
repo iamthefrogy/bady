@@ -1,0 +1,32 @@
+name: Update media manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "media/photos/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build manifest
+        run: node .github/scripts/build-manifest.mjs
+
+      - name: Commit manifest if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate media manifest"
+          file_pattern: media/manifest.json
